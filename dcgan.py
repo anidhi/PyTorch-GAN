@@ -197,7 +197,7 @@ def train(args, dataloader):
             logger.debug(
                 'Epoch: {}/{}, Step: {}/{}'.format(int(epoch), EPOCH_SIZE, idx, max_data))
             logger.info('Loss Descriminator: {:.4f} | Loss Generator: {:.4f}'.format(
-                descriminator_error.data[0], generator_error.data[0]))
+                descriminator_error.data, generator_error.data))
 
             if idx != 0 and idx % 100 == 0:
                 save_images(data[0], 'real_samples', 0)
